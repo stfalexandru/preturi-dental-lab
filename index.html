@@ -3,156 +3,178 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Prețuri 2026 Implant Expert Dental Lab - soluții premium dentare cu transport dedicat și garanție pe viață.">
+  <meta name="description" content="Prețuri 2026 Implant Expert Dental Lab - All-on-X cu garanție pe viață, transport dedicat.">
   <title>Prețuri 2026 – Implant Expert Dental Lab</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
   
   <style>
     :root {
       --primary: #c8102e;      /* roșu intens energetic */
       --accent: #d4af37;       /* auriu luxury */
-      --dark: #0a0a0a;         /* negru profund */
+      --dark: #000000;         /* negru pur dominant */
       --gray: #b0b0b0;
-      --light: #111111;
+      --light: #0f0f0f;
       --white: #ffffff;
     }
     * { margin:0; padding:0; box-sizing:border-box; }
-    body { 
-      font-family: 'Inter', sans-serif; 
-      background: var(--dark); 
-      color: #e0e0e0; 
-      line-height: 1.6; 
-    }
-    h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 800; letter-spacing: -0.5px; }
+    body { font-family: 'Inter', sans-serif; background: var(--dark); color: #e0e0e0; line-height: 1.6; }
+    h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 900; letter-spacing: -0.8px; }
 
     .hero {
-      background: linear-gradient(135deg, rgba(200,16,46,0.85), rgba(10,10,10,0.95)),
-                  url('https://images.unsplash.com/photo-1588776814546-1fb8d16a0d4d?auto=format&fit=crop&q=80') center/cover no-repeat fixed;
+      background: var(--dark);
       color: var(--white);
       text-align: center;
-      padding: 120px 20px 80px;
+      padding: 140px 20px 100px;
       position: relative;
+      border-bottom: 1px solid rgba(200,16,46,0.3);
     }
     .hero::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(circle at 30% 20%, rgba(212,175,55,0.15), transparent 60%);
+      background: radial-gradient(circle at 50% 30%, rgba(200,16,46,0.12), transparent 70%);
       pointer-events: none;
     }
     .hero h1 {
-      font-size: clamp(3rem, 9vw, 6rem);
-      margin-bottom: 1rem;
+      font-size: clamp(3.5rem, 11vw, 7rem);
+      margin-bottom: 1.5rem;
       background: linear-gradient(to right, var(--white), var(--accent));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
     .hero .contact-top {
-      font-size: 1.4rem;
-      margin: 1.8rem 0;
-      font-weight: 600;
+      font-size: 1.5rem;
+      margin: 2rem 0;
+      font-weight: 700;
     }
     .hero .contact-top a {
       color: var(--accent);
       text-decoration: none;
       transition: all 0.3s;
     }
-    .hero .contact-top a:hover { color: var(--primary); text-shadow: 0 0 15px rgba(200,16,46,0.6); }
+    .hero .contact-top a:hover { color: var(--primary); text-shadow: 0 0 20px var(--primary); }
 
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    .reasons { max-width: 1000px; margin: 0 auto 4rem; font-size: 1.3rem; }
+    .reasons ul { list-style: none; padding: 0; }
+    .reasons li { margin-bottom: 1.3rem; padding-left: 2rem; position: relative; }
+    .reasons li::before { content: "→"; position: absolute; left: 0; color: var(--primary); font-size: 1.5rem; }
 
-    .section { padding: 80px 0; }
-    .section-title {
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-    .section-title h2 {
-      font-size: 3rem;
-      color: var(--primary);
-      text-shadow: 0 0 20px rgba(200,16,46,0.4);
-    }
-
-    .grid {
+    .stats {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.8rem;
+      gap: 2rem;
+      max-width: 1100px;
+      margin: 0 auto 3rem;
     }
+    .stat-block {
+      background: rgba(20,20,20,0.7);
+      border: 2px solid var(--primary);
+      border-radius: 16px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      transition: all 0.5s;
+      box-shadow: 0 0 30px rgba(200,16,46,0.2);
+    }
+    .stat-block:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 50px rgba(200,16,46,0.5);
+      border-color: var(--accent);
+    }
+    .stat-number {
+      font-size: 3.5rem;
+      font-weight: 900;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+      min-height: 70px;
+    }
+    .stat-label { font-size: 1.4rem; color: var(--accent); font-weight: 600; }
+
+    .marketing {
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto 5rem;
+      font-size: 1.6rem;
+      padding: 2rem;
+      background: linear-gradient(135deg, rgba(200,16,46,0.15), transparent);
+      border-radius: 20px;
+      border: 1px solid rgba(200,16,46,0.4);
+    }
+    .marketing .garantie {
+      font-size: 5rem;
+      font-weight: 900;
+      color: var(--primary);
+      margin: 1.5rem 0;
+      text-shadow: 0 0 30px var(--primary);
+      line-height: 1;
+    }
+
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    .section { padding: 80px 0; }
+    .section-title { text-align: center; margin-bottom: 3rem; }
+    .section-title h2 { font-size: 3.5rem; color: var(--primary); text-shadow: 0 0 25px rgba(200,16,46,0.5); }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.8rem; }
     .card {
-      background: rgba(20,20,20,0.8);
-      border: 1px solid rgba(200,16,46,0.2);
+      background: rgba(20,20,20,0.85);
+      border: 1px solid rgba(200,16,46,0.25);
       border-radius: 16px;
       padding: 1.6rem;
-      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transition: all 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       opacity: 0;
-      transform: translateY(40px);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+      transform: translateY(50px) scale(0.95);
+      box-shadow: 0 10px 35px rgba(0,0,0,0.6);
     }
-    .card.visible { opacity: 1; transform: translateY(0); }
+    .card.visible { opacity: 1; transform: translateY(0) scale(1); }
     .card:hover {
-      transform: translateY(-15px) scale(1.04);
+      transform: translateY(-18px) scale(1.06);
       border-color: var(--primary);
-      box-shadow: 0 20px 60px rgba(200,16,46,0.3);
-      background: rgba(30,30,30,0.9);
+      box-shadow: 0 25px 70px rgba(200,16,46,0.4);
     }
-    .card h3 {
-      font-size: 1.4rem;
-      color: var(--accent);
-      margin-bottom: 0.8rem;
-      transition: all 0.3s;
-    }
+    .card h3 { font-size: 1.35rem; color: var(--accent); margin-bottom: 0.7rem; transition: all 0.3s; }
     .card:hover h3 { color: var(--white); }
-    .price {
-      font-size: 2.2rem;
-      font-weight: 800;
-      color: var(--primary);
-      transition: all 0.3s;
-    }
-    .card:hover .price { color: var(--accent); text-shadow: 0 0 15px rgba(212,175,55,0.5); }
+    .price { font-size: 2.3rem; font-weight: 800; color: var(--primary); transition: all 0.3s; }
+    .card:hover .price { color: var(--accent); text-shadow: 0 0 20px rgba(212,175,55,0.6); }
 
     .advantages { background: var(--light); }
     .adv-list { max-width: 900px; margin: 0 auto; }
     .adv-item {
-      margin-bottom: 2rem;
-      padding: 1.2rem;
-      border-left: 4px solid var(--primary);
+      margin-bottom: 2.2rem;
+      padding: 1.4rem;
+      border-left: 5px solid var(--primary);
       transition: all 0.4s;
       opacity: 0;
-      transform: translateX(-30px);
+      transform: translateX(-40px);
     }
     .adv-item.visible { opacity: 1; transform: translateX(0); }
-    .adv-item:hover {
-      border-left-color: var(--accent);
-      background: rgba(200,16,46,0.08);
-    }
-    .adv-item strong { color: var(--accent); font-weight: 700; }
+    .adv-item:hover { border-left-color: var(--accent); background: rgba(200,16,46,0.1); }
 
     .contact {
-      background: linear-gradient(135deg, var(--primary), #8b0000);
+      background: linear-gradient(135deg, var(--primary), #800000);
       color: white;
       text-align: center;
-      padding: 60px 20px;
+      padding: 70px 20px;
     }
-    .contact h2 { margin-bottom: 1.5rem; }
     .contact a {
-      font-size: 1.6rem;
+      font-size: 1.8rem;
       color: var(--accent);
-      font-weight: 700;
+      font-weight: 800;
       text-decoration: none;
       display: block;
-      margin: 1rem 0;
-      transition: all 0.3s;
+      margin: 1.2rem 0;
+      transition: all 0.4s;
     }
-    .contact a:hover { transform: scale(1.05); text-shadow: 0 0 20px rgba(212,175,55,0.7); }
+    .contact a:hover { transform: scale(1.08); text-shadow: 0 0 25px var(--accent); }
 
-    footer { background: black; color: #777; text-align: center; padding: 2rem; font-size: 0.9rem; }
+    footer { background: black; color: #888; text-align: center; padding: 2.5rem; font-size: 0.95rem; }
 
     @media (max-width: 768px) {
-      .hero { padding: 90px 15px 60px; }
-      .section-title h2 { font-size: 2.4rem; }
-      .grid { gap: 1.4rem; }
+      .hero { padding: 100px 15px 70px; }
+      .stats { gap: 1.5rem; }
+      .stat-number { font-size: 2.8rem; }
+      .marketing .garantie { font-size: 3.8rem; }
+      .section-title h2 { font-size: 2.8rem; }
     }
   </style>
 </head>
@@ -164,7 +186,39 @@
       <div class="contact-top">
         <a href="tel:+40744574365">0744 574 365</a> • <a href="mailto:alexandru.stefan@reginamaria.ro">alexandru.stefan@reginamaria.ro</a>
       </div>
-      <p style="font-size:1.3rem; margin-top:1rem; opacity:0.9;">Energie premium în fiecare lucrare dentară</p>
+
+      <div class="reasons">
+        <h2 style="font-size:2.4rem; margin:2.5rem 0 1.5rem; color:var(--accent);">De ce să alegi Implant Expert Dental Lab?</h2>
+        <ul>
+          <li>Transport dedicat în București cu 2 șoferi – zilnic 09:00–20:00.</li>
+          <li>Livrare națională expres prin TNT – lucrări intacte și la timp.</li>
+          <li>Suport tehnic non-stop – telefon, email sau prezență în clinică.</li>
+          <li>Materiale certificate CE/FDA cu trasabilitate completă.</li>
+          <li>Flux CAD/CAM digital – precizie maximă, timp minim de execuție.</li>
+        </ul>
+      </div>
+
+      <div class="stats">
+        <div class="stat-block">
+          <div class="stat-number" data-target="6000">0</div>
+          <div class="stat-label">Lucrări All-on-X finale</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-number" data-target="6500">0</div>
+          <div class="stat-label">Lucrări provizorii All-on-X</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-number" data-target="200000">0</div>
+          <div class="stat-label">Coroane realizate</div>
+        </div>
+      </div>
+
+      <div class="marketing">
+        <p style="font-size:1.8rem; margin-bottom:1.5rem;">Experiența noastră vastă și mii de cazuri de succes ne oferă încrederea să oferim clienților noștri parteneri</p>
+        <div class="garantie">GARANȚIE PE VIAȚĂ</div>
+        <p style="font-size:1.5rem;">la toate lucrările All-on-X, cu condiția respectării protocolului Implant Expert Dental Lab (controale periodice, igienă riguroasă, utilizare corectă).</p>
+      </div>
+
     </div>
   </header>
 
@@ -203,7 +257,7 @@
   <section class="section advantages">
     <div class="container">
       <div class="section-title">
-        <h2>De ce Implant Expert Dental Lab</h2>
+        <h2>Avantaje cheie</h2>
       </div>
       <div class="adv-list">
         <div class="adv-item"><strong>Transport dedicat București:</strong> 2 șoferi proprii, 09:00–20:00 zilnic – rapid și sigur.</div>
@@ -221,7 +275,7 @@
       <h2>Contactează-ne acum</h2>
       <a href="tel:+40744574365">0744 574 365</a>
       <a href="mailto:alexandru.stefan@reginamaria.ro">alexandru.stefan@reginamaria.ro</a>
-      <p style="margin-top:1.5rem; font-size:1.1rem;">Ofertă personalizată în <strong>maxim 24h</strong></p>
+      <p style="margin-top:1.8rem; font-size:1.2rem;">Ofertă personalizată în <strong>maxim 24h</strong> – suntem gata să transformăm zâmbetul pacienților tăi</p>
     </div>
   </section>
 
@@ -230,13 +284,41 @@
   </footer>
 
   <script>
-    const items = document.querySelectorAll('.card, .adv-item');
+    // Fade-in pentru elemente
+    const items = document.querySelectorAll('.card, .adv-item, .stat-block');
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) entry.target.classList.add('visible');
       });
     }, { threshold: 0.15 });
     items.forEach(item => observer.observe(item));
+
+    // Animated counters
+    const counters = document.querySelectorAll('.stat-number');
+    const speed = 200;
+
+    const animateCounter = (el) => {
+      const target = +el.getAttribute('data-target');
+      const count = +el.innerText.replace(/[^0-9]/g, '');
+      const inc = target / speed;
+
+      if (count < target) {
+        el.innerText = Math.ceil(count + inc).toLocaleString('ro-RO');
+        setTimeout(() => animateCounter(el), 1);
+      } else {
+        el.innerText = target.toLocaleString('ro-RO') + '+';
+      }
+    };
+
+    counters.forEach(counter => {
+      const observerCounter = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) {
+          animateCounter(counter);
+          observerCounter.unobserve(counter);
+        }
+      }, { threshold: 0.5 });
+      observerCounter.observe(counter);
+    });
   </script>
 
 </body>
