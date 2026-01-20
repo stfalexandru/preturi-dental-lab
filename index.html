@@ -3,170 +3,221 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Implant Expert Dental Lab - prețuri 2026, garanție pe viață All-on-X, transport dedicat București, materiale certificate.">
-  <title>Implant Expert Dental Lab – Prețuri & Informații 2026</title>
+  <meta name="description" content="Implant Expert Dental Lab – soluții premium All-on-X 2026, garanție pe viață, tehnologie digitală avansată.">
+  <title>Implant Expert Dental Lab – Premium 2026</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
   <style>
     :root {
-      --primary: #c8102e;      /* roșu energic principal */
-      --accent: #d4af37;       /* auriu luxury pentru highlight */
-      --dark: #1a1a1a;         /* negru închis pentru text principal */
-      --gray: #4a4a4a;
-      --light: #f8f9fa;        /* fundal deschis principal */
-      --white: #ffffff;
-      --border: rgba(200,16,46,0.15);
+      --primary: #ff1a4d;      /* roșu neon luxury-tech */
+      --accent: #00f0ff;       /* cyan futuristic */
+      --gold: #e0c070;         /* auriu subtil */
+      --dark: #0a0a0f;
+      --darker: #050509;
+      --gray: #a0a0c0;
+      --white: #f0f0ff;
+      --glass: rgba(10,10,15,0.45);
     }
     * { margin:0; padding:0; box-sizing:border-box; }
     body { 
       font-family: 'Inter', sans-serif; 
-      background: var(--light); 
-      color: var(--dark); 
+      background: var(--darker); 
+      color: var(--white); 
       line-height: 1.7; 
+      background-image: 
+        radial-gradient(circle at 15% 15%, rgba(255,26,77,0.08) 0%, transparent 40%),
+        radial-gradient(circle at 85% 85%, rgba(0,240,255,0.06) 0%, transparent 50%);
+      background-attachment: fixed;
     }
-    h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 900; letter-spacing: -0.6px; }
+    h1, h2, h3 { 
+      font-family: 'Orbitron', sans-serif; 
+      font-weight: 900; 
+      letter-spacing: 1px; 
+      text-transform: uppercase;
+    }
 
     .hero {
-      background: linear-gradient(135deg, rgba(255,255,255,0.98), rgba(248,249,250,0.98)),
-                  url('https://images.unsplash.com/photo-1588776814546-1fb8d16a0d4d?auto=format&fit=crop&q=80') center/cover no-repeat fixed;
-      color: var(--dark);
+      background: linear-gradient(135deg, var(--darker) 0%, #0f0015 100%);
+      padding: 120px 15px 80px;
       text-align: center;
-      padding: 100px 15px 60px;
       position: relative;
-      box-shadow: inset 0 0 100px rgba(200,16,46,0.08);
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 20%, rgba(255,26,77,0.12), transparent 60%);
+      pointer-events: none;
+      animation: pulse-glow 12s infinite alternate;
+    }
+    @keyframes pulse-glow {
+      0% { opacity: 0.6; transform: scale(1); }
+      100% { opacity: 1; transform: scale(1.15); }
     }
     .hero h1 {
-      font-size: clamp(2.8rem, 9vw, 5.5rem);
-      margin-bottom: 1.5rem;
-      color: var(--primary);
+      font-size: clamp(3rem, 10vw, 7rem);
+      background: linear-gradient(90deg, var(--white), var(--accent), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 40px rgba(0,240,255,0.4);
     }
 
     .tabs {
       display: flex;
       justify-content: center;
-      gap: 1.2rem;
-      margin: 2rem 0 3rem;
+      gap: 1.5rem;
+      margin: 2.5rem 0 4rem;
       flex-wrap: wrap;
     }
     .tab-btn {
-      background: var(--white);
-      border: 2px solid var(--primary);
-      color: var(--primary);
-      font-size: 1.3rem;
+      background: var(--glass);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,26,77,0.4);
+      color: var(--accent);
+      font-size: 1.4rem;
       font-weight: 700;
-      padding: 1rem 2.2rem;
-      border-radius: 50px;
+      padding: 1.2rem 2.8rem;
+      border-radius: 60px;
       cursor: pointer;
-      transition: all 0.4s ease;
-      min-width: 220px;
-      box-shadow: 0 4px 15px rgba(200,16,46,0.12);
+      transition: all 0.5s cubic-bezier(0.23,1,0.32,1);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+      position: relative;
+      overflow: hidden;
     }
+    .tab-btn::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 100%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+      transition: 0.7s;
+    }
+    .tab-btn:hover::before { left: 100%; }
     .tab-btn.active,
     .tab-btn:hover {
-      background: var(--primary);
-      color: var(--white);
+      background: linear-gradient(135deg, var(--primary), #ff4d7a);
+      color: white;
       border-color: var(--accent);
-      box-shadow: 0 8px 30px rgba(200,16,46,0.3);
-      transform: translateY(-4px);
+      box-shadow: 0 0 40px rgba(255,26,77,0.5), 0 0 80px rgba(0,240,255,0.3);
+      transform: translateY(-6px) scale(1.05);
     }
 
     .tab-content {
       display: none;
       opacity: 0;
-      transition: opacity 0.6s ease;
+      transition: opacity 0.8s ease;
     }
-    .tab-content.active {
-      display: block;
-      opacity: 1;
-    }
+    .tab-content.active { display: block; opacity: 1; }
 
+    /* Informații & Avantaje */
     .info-contact {
       text-align: center;
-      max-width: 800px;
-      margin: 0 auto 3rem;
-      font-size: 1.3rem;
-      color: var(--gray);
+      max-width: 900px;
+      margin: 0 auto 4rem;
+      font-size: 1.35rem;
     }
-    .info-contact h2 { color: var(--primary); margin-bottom: 1.5rem; font-size: 2.4rem; }
-    .info-contact p { margin: 1.2rem 0; }
-    .info-contact a { color: var(--primary); font-weight: 600; text-decoration: none; }
-    .info-contact a:hover { color: var(--accent); text-decoration: underline; }
+    .info-contact h2 { 
+      color: var(--accent); 
+      font-size: 2.8rem; 
+      margin-bottom: 2rem; 
+      text-shadow: 0 0 20px rgba(0,240,255,0.4); 
+    }
+    .info-contact a { 
+      color: var(--primary); 
+      font-weight: 600; 
+      text-decoration: none; 
+    }
+    .info-contact a:hover { color: var(--accent); text-shadow: 0 0 15px var(--accent); }
 
     .advantages-list {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 0 auto;
     }
     .adv-item {
-      background: var(--white);
-      border-left: 5px solid var(--primary);
-      padding: 1.6rem;
-      margin-bottom: 1.6rem;
-      border-radius: 8px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-      transition: all 0.4s;
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    .adv-item.visible { opacity: 1; transform: translateY(0); }
-    .adv-item:hover { 
-      border-left-color: var(--accent); 
-      box-shadow: 0 10px 30px rgba(200,16,46,0.15); 
-      transform: translateY(-5px); 
-    }
-    .adv-item strong { color: var(--primary); font-size: 1.4rem; display: block; margin-bottom: 0.6rem; }
-
-    /* Prețuri */
-    .section { padding: 60px 0; }
-    .section-title h2 { font-size: 3rem; color: var(--primary); }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
-    .card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 1.5rem;
-      transition: all 0.4s;
+      background: var(--glass);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,26,77,0.3);
+      border-radius: 16px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      transition: all 0.5s;
       opacity: 0;
       transform: translateY(40px);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    }
+    .adv-item.visible { opacity: 1; transform: translateY(0); }
+    .adv-item:hover {
+      border-color: var(--accent);
+      box-shadow: 0 20px 70px rgba(0,240,255,0.25);
+      transform: translateY(-8px);
+    }
+    .adv-item strong { 
+      color: var(--primary); 
+      font-size: 1.6rem; 
+      display: block; 
+      margin-bottom: 0.8rem; 
+      text-shadow: 0 0 10px rgba(255,26,77,0.5); 
+    }
+
+    /* Prețuri */
+    .section-title h2 { 
+      font-size: 3.2rem; 
+      color: var(--primary); 
+      text-shadow: 0 0 25px rgba(255,26,77,0.5); 
+    }
+    .card {
+      background: var(--glass);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,26,77,0.3);
+      border-radius: 16px;
+      padding: 1.8rem;
+      transition: all 0.5s;
+      opacity: 0;
+      transform: translateY(50px);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
     }
     .card.visible { opacity: 1; transform: translateY(0); }
     .card:hover {
-      transform: translateY(-12px);
-      border-color: var(--primary);
-      box-shadow: 0 15px 40px rgba(200,16,46,0.15);
+      border-color: var(--accent);
+      box-shadow: 0 20px 80px rgba(0,240,255,0.3);
+      transform: translateY(-12px) scale(1.03);
     }
-    .card h3 { font-size: 1.3rem; color: var(--primary); margin-bottom: 0.6rem; transition: all 0.3s; }
-    .card:hover h3 { color: var(--accent); }
-    .price { font-size: 2.1rem; font-weight: 800; color: var(--primary); transition: all 0.3s; }
-    .card:hover .price { color: var(--accent); text-shadow: 0 0 12px rgba(212,175,55,0.4); }
+    .card h3 { color: var(--accent); font-size: 1.4rem; transition: all 0.3s; }
+    .card:hover h3 { color: var(--white); text-shadow: 0 0 12px var(--accent); }
+    .price { color: var(--primary); font-size: 2.4rem; font-weight: 900; transition: all 0.3s; }
+    .card:hover .price { color: var(--accent); text-shadow: 0 0 20px var(--accent); }
 
     .contact-footer {
-      background: var(--primary);
+      background: linear-gradient(135deg, var(--primary), #ff4d7a);
       color: white;
       text-align: center;
-      padding: 50px 15px;
-      margin-top: 4rem;
+      padding: 60px 15px;
+      margin-top: 5rem;
     }
     .contact-footer a {
-      color: var(--accent);
-      font-size: 1.6rem;
-      font-weight: 700;
+      color: var(--gold);
+      font-size: 1.8rem;
+      font-weight: 800;
       text-decoration: none;
-      margin: 0.8rem;
+      margin: 1rem;
       display: inline-block;
+      transition: all 0.4s;
     }
-    .contact-footer a:hover { text-shadow: 0 0 15px var(--accent); }
+    .contact-footer a:hover { transform: scale(1.1); text-shadow: 0 0 20px var(--gold); }
 
-    footer { background: var(--dark); color: #aaa; text-align: center; padding: 2rem; font-size: 0.9rem; }
+    footer { background: var(--darker); color: #777; text-align: center; padding: 2.5rem; font-size: 0.95rem; }
 
     @media (max-width: 768px) {
       .tabs { flex-direction: column; gap: 1rem; }
       .tab-btn { width: 100%; padding: 1.2rem; font-size: 1.2rem; }
       .hero { padding: 80px 12px 50px; }
       .grid { grid-template-columns: 1fr; }
-      .info-contact h2 { font-size: 2rem; }
+      .info-contact h2 { font-size: 2.2rem; }
+      .advantages-list { padding: 0 10px; }
     }
   </style>
 </head>
@@ -187,44 +238,45 @@
   <div id="info" class="tab-content active">
     <div class="container">
       <div class="info-contact">
-        <h2>Contact</h2>
+        <h2>Contact Direct</h2>
         <p><strong>Email:</strong> <a href="mailto:alexandru.stefan@reginamaria.ro">alexandru.stefan@reginamaria.ro</a></p>
         <p><strong>Adresă:</strong> Str. Chindiei nr. 4, Piața Unirii, București</p>
         <p><strong>Telefon:</strong> <a href="tel:+40744574365">0744 574 365</a></p>
       </div>
 
       <div class="advantages-list">
-        <h2 style="text-align:center; color:var(--primary); margin:3rem 0 2rem; font-size:2.4rem;">De ce să colaborați cu noi</h2>
+        <h2 style="text-align:center; color:var(--accent); margin:4rem 0 2.5rem; font-size:2.8rem; text-shadow:0 0 20px rgba(0,240,255,0.5);">Avantaje Premium</h2>
         
-        <div class="adv-item"><strong>Garanție pe viață</strong> la toate lucrările All-on-X – oferită cu încredere datorită calității excepționale și experienței acumulate.</div>
-        <div class="adv-item"><strong>Transport dedicat București</strong> – 2 șoferi proprii, program zilnic 09:00–21:00 – ridicare și livrare gratuită și rapidă.</div>
-        <div class="adv-item"><strong>Livrare națională expres</strong> – prin TNT Express, lucrările ajung în siguranță și în cel mai scurt timp.</div>
-        <div class="adv-item"><strong>Doar materiale biocompatibile & certificate</strong> – agreate de Uniunea Europeană și de Colegiul Medicilor Dentiști din România.</div>
-        <div class="adv-item"><strong>Documentație completă</strong> – trasabilitate 100% pentru fiecare componentă, certificate și fișe tehnice disponibile oricând.</div>
-        <div class="adv-item"><strong>Disponibilitate totală</strong> – suport tehnic permanent prin telefon, email sau prezență directă în clinici.</div>
-        <div class="adv-item"><strong>Tehnologie digitală avansată</strong> – flux CAD/CAM complet pentru adaptare perfectă și execuție rapidă.</div>
+        <div class="adv-item"><strong>Garanție pe viață</strong> la soluțiile All-on-X – încredere totală bazată pe calitate și experiență de top.</div>
+        <div class="adv-item"><strong>Transport dedicat București</strong> – 2 șoferi proprii, program extins 09:00–21:00 – logistică zero griji.</div>
+        <div class="adv-item"><strong>Livrare națională ultra-rapidă</strong> – TNT Express, integritate și viteză maximă garantate.</div>
+        <div class="adv-item"><strong>Materiale biocompatibile certificate</strong> – conforme UE și Colegiul Medicilor Dentiști, doar ce e mai bun.</div>
+        <div class="adv-item"><strong>Documentație completă & trasabilitate</strong> – certificate, fișe tehnice și istoric material la cerere instant.</div>
+        <div class="adv-item"><strong>Suport tehnic 24/7</strong> – telefon, email sau prezență fizică în clinică – rezolvăm orice problemă imediat.</div>
+        <div class="adv-item"><strong>Tehnologie digitală de vârf</strong> – CAD/CAM full digital, scanare 3D, precizie la micron și timp minim de execuție.</div>
       </div>
     </div>
   </div>
 
-  <!-- Lista de Prețuri (exact ca înainte) -->
+  <!-- Lista de Prețuri -->
   <div id="prices" class="tab-content">
     <div class="container">
       <div class="section-title">
-        <h2>Servicii & Prețuri 2026</h2>
+        <h2>Prețuri 2026</h2>
       </div>
       <div class="grid">
         <div class="card"><h3>Coroană Zirconiu Ceramică</h3><div class="price">500 <small>RON</small></div></div>
         <div class="card"><h3>Coroană Zirconiu Monolitic</h3><div class="price">350 <small>RON</small></div></div>
-        <div class="card"><h3>Coroană e.max Press</h3><div class="price">500 <small>RON</small></div></div>
+        <div class="card"><h3>Coroană e.max Press</h3><div class="price">450 <small>RON</small></div></div>
         <div class="card"><h3>Coroană Provizorie Acrilat / Telio</h3><div class="price">120 <small>RON</small></div></div>
-        <div class="card"><h3>FAST Provizoriu</h3><div class="price">1000 <small>RON</small></div></div>
-        <div class="card"><h3>FAST Metalo-PMMA</h3><div class="price">4300 <small>RON</small></div></div>
+        <div class="card"><h3>FAST Provizoriu</h3><div class="price">800 <small>RON</small></div></div>
+        <div class="card"><h3>FAST Metalo-Compozit</h3><div class="price">4300 <small>RON</small></div></div>
         <div class="card"><h3>FAST Metalo-Zirconiu</h3><div class="price">7500 <small>RON</small></div></div>
         <div class="card"><h3>FAST Metalo-Ceramică</h3><div class="price">8000 <small>RON</small></div></div>
         <div class="card"><h3>FAST Titan-Compozit</h3><div class="price">7300 <small>RON</small></div></div>
         <div class="card"><h3>FAST Titan cu Zirconiu</h3><div class="price">7500 <small>RON</small></div></div>
         <div class="card"><h3>FAST Titan cu e.max</h3><div class="price">8500 <small>RON</small></div></div>
+        <div class="card"><h3>Mini FAST (E)</h3><div class="price">700 <small>RON</small></div></div>
         <div class="card"><h3>Gutieră Albire / Bruxism / Contenție</h3><div class="price">120 <small>RON</small></div></div>
         <div class="card"><h3>Gutieră Essix / Michigan Splint</h3><div class="price">150 <small>RON</small></div></div>
         <div class="card"><h3>Reparație*</h3><div class="price">100 <small>RON</small></div></div>
@@ -233,21 +285,23 @@
         <div class="card"><h3>Model de Studiu / Printat</h3><div class="price">100 <small>RON</small></div></div>
         <div class="card"><h3>Igienizare Lucrare</h3><div class="price">100 <small>RON</small></div></div>
         <div class="card"><h3>Proteză Acrilat</h3><div class="price">720 <small>RON</small></div></div>
+        <div class="card"><h3>Schimbare Teflon</h3><div class="price">100 <small>RON</small></div></div>
+        <div class="card"><h3>Completare Gingie</h3><div class="price">30 <small>RON</small></div></div>
       </div>
     </div>
   </div>
 
   <section class="contact-footer">
     <div class="container">
-      <h2>Contact direct</h2>
+      <h2>Contactează-ne</h2>
       <a href="tel:+40744574365">0744 574 365</a>
       <a href="mailto:alexandru.stefan@reginamaria.ro">alexandru.stefan@reginamaria.ro</a>
-      <p style="margin-top:1.5rem;">Str. Chindiei nr. 4, Piața Unirii, București</p>
+      <p style="margin-top:1.5rem; font-size:1.2rem;">Str. Chindiei nr. 4, Piața Unirii, București</p>
     </div>
   </section>
 
   <footer>
-    <p>© 2026 Implant Expert Dental Lab • Prețuri orientative • Toate drepturile rezervate</p>
+    <p>© 2026 Implant Expert Dental Lab • Tehnologie & Precizie la nivel premium</p>
   </footer>
 
   <script>
@@ -265,7 +319,7 @@
       });
     });
 
-    // Fade-in pentru avantaje și carduri
+    // Fade-in
     const fadeItems = document.querySelectorAll('.adv-item, .card');
     const fadeObserver = new IntersectionObserver(entries => {
       entries.forEach(entry => {
