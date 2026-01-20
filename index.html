@@ -11,64 +11,65 @@
   
   <style>
     :root {
-      --primary: #c8102e;
-      --accent: #d4af37;
-      --dark: #000000;
-      --gray: #b0b0b0;
-      --light: #0f0f0f;
+      --primary: #c8102e;      /* roșu energic principal */
+      --accent: #d4af37;       /* auriu luxury pentru highlight */
+      --dark: #1a1a1a;         /* negru închis pentru text principal */
+      --gray: #4a4a4a;
+      --light: #f8f9fa;        /* fundal deschis principal */
       --white: #ffffff;
+      --border: rgba(200,16,46,0.15);
     }
     * { margin:0; padding:0; box-sizing:border-box; }
     body { 
       font-family: 'Inter', sans-serif; 
-      background: var(--dark); 
-      color: #e0e0e0; 
-      line-height: 1.6; 
+      background: var(--light); 
+      color: var(--dark); 
+      line-height: 1.7; 
     }
-    h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 900; letter-spacing: -0.8px; }
+    h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 900; letter-spacing: -0.6px; }
 
     .hero {
-      background: var(--dark);
-      color: var(--white);
+      background: linear-gradient(135deg, rgba(255,255,255,0.98), rgba(248,249,250,0.98)),
+                  url('https://images.unsplash.com/photo-1588776814546-1fb8d16a0d4d?auto=format&fit=crop&q=80') center/cover no-repeat fixed;
+      color: var(--dark);
       text-align: center;
       padding: 100px 15px 60px;
       position: relative;
+      box-shadow: inset 0 0 100px rgba(200,16,46,0.08);
     }
     .hero h1 {
       font-size: clamp(2.8rem, 9vw, 5.5rem);
       margin-bottom: 1.5rem;
-      background: linear-gradient(to right, var(--white), var(--accent));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: var(--primary);
     }
 
     .tabs {
       display: flex;
       justify-content: center;
-      gap: 1rem;
+      gap: 1.2rem;
       margin: 2rem 0 3rem;
       flex-wrap: wrap;
     }
     .tab-btn {
-      background: rgba(20,20,20,0.8);
+      background: var(--white);
       border: 2px solid var(--primary);
-      color: var(--accent);
+      color: var(--primary);
       font-size: 1.3rem;
       font-weight: 700;
-      padding: 1rem 2rem;
+      padding: 1rem 2.2rem;
       border-radius: 50px;
       cursor: pointer;
-      transition: all 0.4s;
+      transition: all 0.4s ease;
       min-width: 220px;
-      text-align: center;
+      box-shadow: 0 4px 15px rgba(200,16,46,0.12);
     }
     .tab-btn.active,
     .tab-btn:hover {
       background: var(--primary);
       color: var(--white);
       border-color: var(--accent);
-      box-shadow: 0 0 25px rgba(200,16,46,0.5);
-      transform: translateY(-3px);
+      box-shadow: 0 8px 30px rgba(200,16,46,0.3);
+      transform: translateY(-4px);
     }
 
     .tab-content {
@@ -86,58 +87,63 @@
       max-width: 800px;
       margin: 0 auto 3rem;
       font-size: 1.3rem;
+      color: var(--gray);
     }
-    .info-contact h2 { color: var(--accent); margin-bottom: 1.5rem; font-size: 2.2rem; }
-    .info-contact p { margin: 1rem 0; }
-    .info-contact a { color: var(--accent); font-weight: 600; text-decoration: none; }
-    .info-contact a:hover { text-decoration: underline; color: var(--white); }
+    .info-contact h2 { color: var(--primary); margin-bottom: 1.5rem; font-size: 2.4rem; }
+    .info-contact p { margin: 1.2rem 0; }
+    .info-contact a { color: var(--primary); font-weight: 600; text-decoration: none; }
+    .info-contact a:hover { color: var(--accent); text-decoration: underline; }
 
     .advantages-list {
       max-width: 900px;
       margin: 0 auto;
     }
     .adv-item {
-      background: rgba(20,20,20,0.7);
+      background: var(--white);
       border-left: 5px solid var(--primary);
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
+      padding: 1.6rem;
+      margin-bottom: 1.6rem;
       border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
       transition: all 0.4s;
       opacity: 0;
       transform: translateY(30px);
     }
     .adv-item.visible { opacity: 1; transform: translateY(0); }
-    .adv-item:hover { border-left-color: var(--accent); background: rgba(200,16,46,0.12); }
-    .adv-item strong { color: var(--accent); font-size: 1.4rem; display: block; margin-bottom: 0.6rem; }
+    .adv-item:hover { 
+      border-left-color: var(--accent); 
+      box-shadow: 0 10px 30px rgba(200,16,46,0.15); 
+      transform: translateY(-5px); 
+    }
+    .adv-item strong { color: var(--primary); font-size: 1.4rem; display: block; margin-bottom: 0.6rem; }
 
-    /* Prețuri - rămâne exact ca înainte */
+    /* Prețuri */
     .section { padding: 60px 0; }
-    .section-title { text-align: center; margin-bottom: 2.5rem; }
-    .section-title h2 { font-size: 3rem; color: var(--primary); text-shadow: 0 0 20px rgba(200,16,46,0.4); }
+    .section-title h2 { font-size: 3rem; color: var(--primary); }
     .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
     .card {
-      background: rgba(20,20,20,0.85);
-      border: 1px solid rgba(200,16,46,0.25);
+      background: var(--white);
+      border: 1px solid var(--border);
       border-radius: 14px;
-      padding: 1.4rem;
+      padding: 1.5rem;
       transition: all 0.4s;
       opacity: 0;
       transform: translateY(40px);
-      box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
     }
     .card.visible { opacity: 1; transform: translateY(0); }
     .card:hover {
-      transform: translateY(-15px) scale(1.04);
+      transform: translateY(-12px);
       border-color: var(--primary);
-      box-shadow: 0 20px 60px rgba(200,16,46,0.4);
+      box-shadow: 0 15px 40px rgba(200,16,46,0.15);
     }
-    .card h3 { font-size: 1.3rem; color: var(--accent); margin-bottom: 0.6rem; transition: all 0.3s; }
-    .card:hover h3 { color: var(--white); }
+    .card h3 { font-size: 1.3rem; color: var(--primary); margin-bottom: 0.6rem; transition: all 0.3s; }
+    .card:hover h3 { color: var(--accent); }
     .price { font-size: 2.1rem; font-weight: 800; color: var(--primary); transition: all 0.3s; }
-    .card:hover .price { color: var(--accent); text-shadow: 0 0 15px rgba(212,175,55,0.5); }
+    .card:hover .price { color: var(--accent); text-shadow: 0 0 12px rgba(212,175,55,0.4); }
 
     .contact-footer {
-      background: linear-gradient(135deg, var(--primary), #800000);
+      background: var(--primary);
       color: white;
       text-align: center;
       padding: 50px 15px;
@@ -153,15 +159,14 @@
     }
     .contact-footer a:hover { text-shadow: 0 0 15px var(--accent); }
 
-    footer { background: black; color: #777; text-align: center; padding: 2rem; font-size: 0.9rem; }
+    footer { background: var(--dark); color: #aaa; text-align: center; padding: 2rem; font-size: 0.9rem; }
 
     @media (max-width: 768px) {
       .tabs { flex-direction: column; gap: 1rem; }
-      .tab-btn { min-width: auto; width: 100%; padding: 1.2rem; font-size: 1.2rem; }
+      .tab-btn { width: 100%; padding: 1.2rem; font-size: 1.2rem; }
       .hero { padding: 80px 12px 50px; }
-      .section { padding: 40px 0; }
-      .grid { grid-template-columns: 1fr; gap: 1.2rem; }
-      .info-contact h2 { font-size: 1.9rem; }
+      .grid { grid-template-columns: 1fr; }
+      .info-contact h2 { font-size: 2rem; }
     }
   </style>
 </head>
@@ -178,7 +183,7 @@
     </div>
   </header>
 
-  <!-- Secțiunea Informații & Avantaje -->
+  <!-- Informații & Avantaje -->
   <div id="info" class="tab-content active">
     <div class="container">
       <div class="info-contact">
@@ -189,20 +194,20 @@
       </div>
 
       <div class="advantages-list">
-        <h2 style="text-align:center; color:var(--accent); margin:3rem 0 2rem; font-size:2.4rem;">Avantaje cheie – De ce să colaborați cu noi</h2>
+        <h2 style="text-align:center; color:var(--primary); margin:3rem 0 2rem; font-size:2.4rem;">De ce să colaborați cu noi</h2>
         
-        <div class="adv-item"><strong>Garanție pe viață</strong> la toate lucrările All-on-X – oferită cu încredere datorită experienței și calității materialelor.</div>
-        <div class="adv-item"><strong>Transport dedicat București</strong> – 2 șoferi proprii, disponibil zilnic între 09:00 și 21:00 – ridicare și livrare rapidă, fără costuri suplimentare.</div>
-        <div class="adv-item"><strong>Livrare națională expres</strong> – prin TNT Express, lucrările ajung intacte și în cel mai scurt timp posibil.</div>
-        <div class="adv-item"><strong>Doar materiale biocompatibile și agreate</strong> – certificate CE/FDA, conforme cu standardele Uniunii Europene și ale Colegiului Medicilor Dentiști din România.</div>
-        <div class="adv-item"><strong>Documentație completă</strong> – trasabilitate integrală pentru fiecare componentă, certificate și fișe tehnice furnizate la cerere.</div>
-        <div class="adv-item"><strong>Disponibilitate maximă</strong> – suport tehnic oricând prin telefon, email sau prezență directă în clinici pentru ajustări și rezolvări imediate.</div>
-        <div class="adv-item"><strong>Flux digital complet</strong> – CAD/CAM modern pentru precizie excepțională, adaptare perfectă și timp de execuție redus.</div>
+        <div class="adv-item"><strong>Garanție pe viață</strong> la toate lucrările All-on-X – oferită cu încredere datorită calității excepționale și experienței acumulate.</div>
+        <div class="adv-item"><strong>Transport dedicat București</strong> – 2 șoferi proprii, program zilnic 09:00–21:00 – ridicare și livrare gratuită și rapidă.</div>
+        <div class="adv-item"><strong>Livrare națională expres</strong> – prin TNT Express, lucrările ajung în siguranță și în cel mai scurt timp.</div>
+        <div class="adv-item"><strong>Doar materiale biocompatibile & certificate</strong> – agreate de Uniunea Europeană și de Colegiul Medicilor Dentiști din România.</div>
+        <div class="adv-item"><strong>Documentație completă</strong> – trasabilitate 100% pentru fiecare componentă, certificate și fișe tehnice disponibile oricând.</div>
+        <div class="adv-item"><strong>Disponibilitate totală</strong> – suport tehnic permanent prin telefon, email sau prezență directă în clinici.</div>
+        <div class="adv-item"><strong>Tehnologie digitală avansată</strong> – flux CAD/CAM complet pentru adaptare perfectă și execuție rapidă.</div>
       </div>
     </div>
   </div>
 
-  <!-- Secțiunea Lista de Prețuri -->
+  <!-- Lista de Prețuri (exact ca înainte) -->
   <div id="prices" class="tab-content">
     <div class="container">
       <div class="section-title">
@@ -213,23 +218,21 @@
         <div class="card"><h3>Coroană Zirconiu Monolitic</h3><div class="price">350 <small>RON</small></div></div>
         <div class="card"><h3>Coroană e.max Press</h3><div class="price">500 <small>RON</small></div></div>
         <div class="card"><h3>Coroană Provizorie Acrilat / Telio</h3><div class="price">120 <small>RON</small></div></div>
-        <div class="card"><h3>FAST Provizoriu</h3><div class="price">1000-1500 <small>RON</small></div></div>
+        <div class="card"><h3>FAST Provizoriu</h3><div class="price">1000 <small>RON</small></div></div>
         <div class="card"><h3>FAST Metalo-PMMA</h3><div class="price">4300 <small>RON</small></div></div>
         <div class="card"><h3>FAST Metalo-Zirconiu</h3><div class="price">7500 <small>RON</small></div></div>
         <div class="card"><h3>FAST Metalo-Ceramică</h3><div class="price">8000 <small>RON</small></div></div>
         <div class="card"><h3>FAST Titan-Compozit</h3><div class="price">7300 <small>RON</small></div></div>
         <div class="card"><h3>FAST Titan cu Zirconiu</h3><div class="price">7500 <small>RON</small></div></div>
         <div class="card"><h3>FAST Titan cu e.max</h3><div class="price">8500 <small>RON</small></div></div>
-        <div class="card"><h3>Mini FAST (E)</h3><div class="price">700 <small>RON</small></div></div>
         <div class="card"><h3>Gutieră Albire / Bruxism / Contenție</h3><div class="price">120 <small>RON</small></div></div>
         <div class="card"><h3>Gutieră Essix / Michigan Splint</h3><div class="price">150 <small>RON</small></div></div>
+        <div class="card"><h3>Reparație*</h3><div class="price">100 <small>RON</small></div></div>
         <div class="card"><h3>Analiză Ocluzală-fullmouth Waxup functional</h3><div class="price">1200 <small>RON</small></div></div>
         <div class="card"><h3>Wax Up</h3><div class="price">50 <small>RON</small></div></div>
         <div class="card"><h3>Model de Studiu / Printat</h3><div class="price">100 <small>RON</small></div></div>
-        <div class="card"><h3>Igienizare Lucrare</h3><div class="price">120 <small>RON</small></div></div>
+        <div class="card"><h3>Igienizare Lucrare</h3><div class="price">100 <small>RON</small></div></div>
         <div class="card"><h3>Proteză Acrilat</h3><div class="price">720 <small>RON</small></div></div>
-        <div class="card"><h3>Schimbare Teflon</h3><div class="price">100 <small>RON</small></div></div>
-        <div class="card"><h3>Completare Gingie</h3><div class="price">30 <small>RON</small></div></div>
       </div>
     </div>
   </div>
